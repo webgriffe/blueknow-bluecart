@@ -1,0 +1,13 @@
+{
+    "name": "blueknow/bluecart",
+    "type": "magento-module",
+    "authors": [
+        {
+            "name": "Blueknow",
+            "email": "contact@blueknow.com"
+        }
+    ],
+    "extra": {
+        "package-xml": "package.xml"
+    }
+}

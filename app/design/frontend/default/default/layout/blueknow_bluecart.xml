@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Blueknow Bluecart layout configuration file.
+ * 
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Blueknow Bluecart
+ * extension to newer versions in the future. If you wish to customize it for
+ * your needs please save your changes before upgrading.
+ * 
+ * @category	design
+ * @copyright	Copyright (c) 2015 Blueknow, S.L. (http://www.blueknow.com)
+ * @license		GNU General Public License
+ * @author		<a href="mailto:josep.ventura@blueknow.com">Josep M Ventura</a>
+ * @since		1.0.0
+ * 
+ */
+-->
+<layout version="0.1.0">
+	<!-- All pages block -->
+	<default>
+        <reference name="content">
+            <block type="blueknow_bluecart/customer_datalayer" name="bluecart.customer.datalayer" as="bluecart_footer" template="bluecart/customer/datalayer.phtml" />
+        </reference>
+    </default>
+    <!-- Cart block -->
+    <checkout_cart_index>		
+		<reference name="content">			
+			<block before="-" type="blueknow_bluecart/cart_datalayer" name="bluecart.cart.datalayer" as="cart_footer" template="bluecart/cart/datalayer.phtml" />
+		</reference>
+	</checkout_cart_index>
+	<!-- One step checkout block -->
+	<checkout_onepage_index>
+        <reference name="content">          
+            <block before="-" type="blueknow_bluecart/cart_datalayer" name="bluecart.cart.datalayer" as="cart_footer" template="bluecart/cart/datalayer.phtml" />
+        </reference>
+    </checkout_onepage_index>
+	<!-- Success page -->	
+	<checkout_onepage_success>
+		<reference name="content">
+			<block before="-" type="blueknow_bluecart/checkout_datalayer" name="bluecart.checkout.datalayer" as="onepage_datalayer" template="bluecart/checkout/datalayer.phtml" />
+		</reference>
+	</checkout_onepage_success>
+	<checkout_multishipping_success>
+		<reference name="content">
+			<block before="-" type="blueknow_bluecart/checkout_datalayer" name="bluecart.checkout.datalayer" as="multishipping_datalayer" template="bluecart/checkout/datalayer.phtml" />
+		</reference>        
+    </checkout_multishipping_success>     
+</layout>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * System configuration file.
+ * 
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Blueknow Bluecart
+ * extension to newer versions in the future. If you wish to customize it for
+ * your needs please save your changes before upgrading.
+ * 
+ * @category    Blueknow
+ * @copyright   Copyright (c) 2016 Blueknow, S.L. (http://www.blueknow.com)
+ * @license     GNU General Public License
+ * @author      <a href="mailto:santi.ameller@blueknow.com">Santiago Ameller</a>
+ * @author      <a href="mailto:josep.ventura@blueknow.com">Josep M Ventura</a>
+ * @since       1.0.0
+ * 
+ */
+-->
+<config>
+    <sections>
+        <blueknow_bluecart module="blueknow_bluecart">
+            <label>Blueknow > blueCart</label>
+            <tab>service</tab>
+            <class>blueknow-bluecart-section</class>
+            <header_css>blueknow-bluecart-header</header_css>
+            <frontend_type>text</frontend_type>
+            <sort_order>999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <bluecart translate="label,comment">
+                    <label>Main configuration</label>
+                    <comment><![CDATA[<b>Important note:</b> To manage your blueCart configuration, please sign in at <a target='_blank' href='http://www.blueknow.com/customers/login'>Blueknow's dashboard</a>.]]></comment>                                       
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <bk_number translate="comment">
+                            <label>BK number</label>
+                            <comment><![CDATA[Unique identifier assigned to this eCommerce.<br />Do you need one? Obtain it for free at <a href='http://www.blueknow.com?utm_source=magentocommerce.com&utm_medium=backoffice&utm_campaign=blueknow-magento-extension'>here</a>.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bk_number>
+                    	<enabled translate="label,comment">
+                    		<label>Enable</label>
+                            <comment><![CDATA[Activate/Deactivate Blueknow Bluecart module.]]></comment>
+                    		<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                    	</enabled>                    	
+                        <version translate="label,comment">
+                            <label>Version</label>
+                            <comment><![CDATA[Current version of the extension.]]></comment>
+                            <frontend_model>blueknow_bluecart/system_config_version</frontend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </version>
+                    </fields>
+                </bluecart>
+            </groups>
+        </blueknow_bluecart>
+    </sections>
+</config>
