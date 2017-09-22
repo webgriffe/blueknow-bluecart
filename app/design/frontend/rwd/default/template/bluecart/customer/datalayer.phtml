@@ -29,6 +29,7 @@
 	window.blueCart.data.logged= <?php echo json_encode($bUser->isLogged()) ?>;
 	window.blueCart.data.cart_empty= <?php echo json_encode($bUser->isCartEmpty()) ?>;
 	window.blueCart.data.v= "<?php echo $bConfiguration->getModuleVersion() ?>";
+	window.blueCart.data.form_key = "<?php echo $bUser->getFormKey() ?>";
 	<?php if($bUser->isLogged()) { ?>	
 	window.blueCart.data.user = {
 		email: "<?php echo $bUser->getEmail() ?>",

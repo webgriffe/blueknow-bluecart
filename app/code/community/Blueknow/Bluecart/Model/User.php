@@ -86,4 +86,8 @@ class Blueknow_Bluecart_Model_User extends Varien_Object {
 		}
 		return $this->_currency;
 	}
+	
+	public function getFormKey() {
+		return Mage::getSingleton('core/session')->getFormKey();
+	}
 }

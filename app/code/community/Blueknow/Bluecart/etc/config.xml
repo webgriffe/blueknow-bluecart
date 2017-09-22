@@ -20,7 +20,7 @@
 <config>
 	<modules>
 		<Blueknow_Bluecart>
-			<version>1.0.2</version>
+			<version>1.0.3</version>
 		</Blueknow_Bluecart>
 	</modules>
 	<global>
